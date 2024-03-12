@@ -6,7 +6,7 @@
 /*   By: michhern <michhern@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:16:40 by michhern          #+#    #+#             */
-/*   Updated: 2024/03/08 15:25:24 by michhern         ###   ########.fr       */
+/*   Updated: 2024/03/12 12:22:29 by michhern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_putnbr(int n)
 		if (ft_putnbr(n / 10) == -1 || ft_putchar(n % 10 + '0') == -1)
 			return (-1);
 	}
-	return (1);
+	return (ft_putnbr_len(n));
 }
 
 /*int	ft_putnbr(int n)
