@@ -16,21 +16,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new_obj;
+	t_list	*tmp;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
-	new_list = NULL;
+	tmp = NULL;
 	while (lst != NULL)
 	{
-		new_obj = ft_lstnew(f(lst->content));
-		if (!new_obj)
+		new_obj = f(lst->content);
+		new_list = ft_lstnew(f(lst->content));
+		if (!new_list)
 		{
-			ft_lstclear(&new_list, del);
-			return (NULL);
+			del(new_obj);
+			ft_lstclear(&tmp, del);
 		}
-		ft_lstadd_back(&new_list, new_obj);
+		ft_lstadd_back(&tmp, new_list);
 		lst = lst->next;
 	}
-	return (new_list);
+	return (tmp);
 }
 //Crear main y repasar la funcion 
