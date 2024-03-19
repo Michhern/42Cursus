@@ -61,3 +61,32 @@
 	printf("\n");
 	return 0;
 }*/
+/*int	main(void)
+{
+	// Test con %c
+	ft_printf("Test con %%c: %c\n", 'A');
+	printf("Test con %%c: %c\n", 'A');
+
+	// Test con %s
+	//ft_printf("Test con %%s: %s\n", "Hola, mundo!");
+	//printf("Test con %%s: %s\n", "Hola, mundo!");
+
+	// Test con %d
+	ft_printf("Test con %%d: %d\n", 12345);
+	printf("Test con %%d: %d\n", 12345);
+
+	// Test con %x
+	ft_printf("Test con %%x: %x\n", 255);
+	printf("Test con %%x: %x\n", 255);
+
+	// Test con %p
+	int *ptr = NULL;
+	ft_printf("Test con %%p: %p\n", (void *)ptr);
+	printf("Test con %%p: %p\n", (void *)ptr);
+
+	// Test con %%
+	ft_printf("Test con %%%%: %%\n");
+	printf("Test con %%%%: %%\n");
+
+	return 0;
+}*/
