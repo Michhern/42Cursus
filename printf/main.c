@@ -29,6 +29,13 @@
 	return (0);
 }*/
 
+/*int	main(void)
+{
+	size_t	result = ft_strlen("firsta que tal");
+	printf("%zu", result );
+	return (0);
+}*/
+
 /*int main(void)
 {
 	int	len = 0;
