@@ -62,7 +62,7 @@
 	printf("\n");
 	return 0;
 }*/
-int	main(void)
+/*int	main(void)
 {
 	// Test con %c
 	ft_printf("Test con %%c: %c\n", 'A');
@@ -99,4 +99,4 @@ int	main(void)
 	printf("Test con %%%%: %%\n");
 
 	return 0;
-}
+}*/
