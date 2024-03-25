@@ -28,7 +28,6 @@ int	ft_hexalen(unsigned long long hexa, char format)
 	return (len);
 }
 
-// Claro, aquí está el análisis paso a paso de la función `ft_hexalen`:
 
 // 1. `unsigned long long hexa`: Este es el número entero sin signo que se está
 // convirtiendo a hexadecimal.
