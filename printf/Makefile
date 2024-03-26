@@ -35,14 +35,14 @@ DARK_YELLOW =	\033[38;5;143m
 SRCS = ft_putchar.c ft_putnbr.c ft_putnbr_len.c ft_strlen.c \
 ft_putstr.c ft_hexalen.c ft_hexadecimal.c ft_printf.c ft_nbrunsig.c \
 
-INCLUDE = printf.h 
+INCLUDE = ft_printf.h 
 
 CC = gcc
 RM = rm -f 
 LIB = ar rcs
 CFLAGS = -Wall -Wextra -Werror
 
-%.o: %.c ${INCLUDE}
+%.o: %.c ${INCLUDE} Makefile
 	@${CC} ${CFLAGS} -c $< -o $@
 	@echo "${BLUE} ◎ $(BROWN)Compiling ${MAGENTA}→   $(CYAN)$< $(DEF_COLOR)"
 
