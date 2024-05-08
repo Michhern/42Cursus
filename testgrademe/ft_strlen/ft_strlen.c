@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: michhern <michhern@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 14:29:10 by michhern          #+#    #+#             */
-/*   Updated: 2024/04/23 14:51:07 by michhern         ###   ########.fr       */
+/*   Created: 2024/05/08 15:15:54 by michhern          #+#    #+#             */
+/*   Updated: 2024/05/08 15:37:44 by michhern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 int	ft_strlen(char *str)
 {
-	int		len;
+	int	len;
 
 	len = 0;
-	while (str[len] != '\0')
+	while (str[len])
 		len++;
 	return (len);
 }
 
-/*int	main(void)
+/*int main(int argc, char *argv[])
 {
-	char	*str;
-	int		len;
+	char *str = argv[1];
+	int length = ft_strlen(str);
 
-	str = "Hi, fuck u";
-	len = ft_strlen(str);
-	printf("Len of the string: %d\n", len);
-	return (0);
+    if (argc != 2) {
+        printf("Uso: %s <cadena>\n", argv[0]);
+        return (1);
+    }
+    printf("La longitud de la cadena '%s' es %d.\n", str, length);
+
+    return (0);
 }*/
