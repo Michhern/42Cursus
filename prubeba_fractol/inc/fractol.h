@@ -6,7 +6,7 @@
 /*   By: michhern <michhern@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:52:38 by michhern          #+#    #+#             */
-/*   Updated: 2024/11/05 15:00:30 by michhern         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:40:10 by michhern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 	We use a ssquere to
 	keep the rendering math simple
 */
-#define WHIDTH	800
+#define WIDTH	800
 #define HEIGHT	800
 
 /*
