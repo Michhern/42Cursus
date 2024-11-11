@@ -6,7 +6,7 @@
 /*   By: michhern <michhern@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:28:44 by michhern          #+#    #+#             */
-/*   Updated: 2024/11/07 13:36:37 by michhern         ###   ########.fr       */
+/*   Updated: 2024/11/11 14:02:03 by michhern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	close_hendler(t_fractal *fractal)
 	free(fractal->mlx_connection);
 	exit(EXIT_SUCCESS);
 }
+
 /*
 * Keypress prototype
 *int (*f)(int keycode, void *param)
@@ -50,6 +51,7 @@ int	key_handler(int keysym, t_fractal *fractal)
 	fractal_rendel(fractal);
 	return (0);
 }
+
 /*
 * TRACK the mouse
 * to change Julia dynamiclly
@@ -59,8 +61,11 @@ int	julia_track(int x, int y, t_fractal *fractal)
 {
 	if (!ft_strncmp(fractal->name, "Julia", 5))
 	{
-		fractal->julia_x = (map(x, -2, +2, 0, WIDTH) * fractal->zoom) + fractal->julia_x;
-		fractal->julia_y = (map(y, -2, +2, 0, HEIGHT) * fractal->zoom) + fractal->julia_y;
+		fractal->julia_x = (map(x, -2, +2, 0, WIDTH) * fractal->zoom)
+			+ fractal->julia_x;
+		fractal->julia_y = (map(y, -2, +2, 0, HEIGHT) * fractal->zoom)
+			+ fractal->julia_y;
 		fractal_rendel(fractal);
 	}
+	return (0);
 }

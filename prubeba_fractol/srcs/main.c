@@ -6,7 +6,7 @@
 /*   By: michhern <michhern@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:51:08 by michhern          #+#    #+#             */
-/*   Updated: 2024/11/05 15:00:30 by michhern         ###   ########.fr       */
+/*   Updated: 2024/11/11 14:16:05 by michhern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
 * The main function is a TL,DR of the application
 */
 
-#include "../../inc/fractol.h"
+#include "../inc/fractol.h"
 
 int	main(int ac, char **av)
 {
@@ -49,8 +49,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		putstr_fd(ERROR_MASSEGE, STDERR_FILENO);
+		putstr_fd(ERROR_MESSAGE, STDERR_FILENO);
 		exit (EXIT_FAILURE);
 	}
-
 }

@@ -6,13 +6,13 @@
 /*   By: michhern <michhern@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:15:11 by michhern          #+#    #+#             */
-/*   Updated: 2024/11/05 12:30:41 by michhern         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:52:46 by michhern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/fractol.h"
+#include "../inc/fractol.h"
 
-int ft_strncmp(char *s1, char *s2, int n)
+int	ft_strncmp(char *s1, char *s2, int n)
 {
 	if (NULL == s1 || NULL == s2 || n <= 0)
 		return (0);
@@ -33,7 +33,7 @@ void	putstr_fd(char *s, int fd)
 		return ;
 	if (*s != '\0')
 	{
-		write(fd, s, 1); buf: n:
+		write(fd, s, 1);
 		putstr_fd(s + 1, fd);
 	}
 }
