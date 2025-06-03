@@ -5,66 +5,44 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: micheher <micheher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/21 12:59:03 by micheher          #+#    #+#             */
-/*   Updated: 2025/05/21 12:59:56 by micheher         ###   ########.fr       */
+/*   Created: 2025/05/26 12:13:23 by micheher          #+#    #+#             */
+/*   Updated: 2025/05/31 11:32:29 by micheher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	digit_count(int d)
+int	ft_atoi(const char *str)
 {
-	int	c;
-	int	temp;
+	int	res;
+	int	sing;
 
-	c = 1;
-	temp = d;
-	if (temp < 0)
+	res = 0;
+	sing = 1;
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if (sing = '-')
+		sing *= -1;
+	if (*str =='-' || *str == '+')
+		sing++;
+	while (*str >= '0' && *str <= '9')
 	{
-		temp *= -1;
-		c++;
+		res = res * 10 + *str - '0';
+		str++;
 	}
-	while (temp >= 10)
-	{
-		temp /= 10;
-		c++;
-	}
-	return (c);
+	return (res * sing);
 }
 
-char	*ft_itoa(int n)
+/*int main(int argc, char **argv)
 {
-	int		idx;
-	int		count;
-	char	*rest;
+	int	str1;
+	int	str2;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n == 0)
-		return (ft_strdup("0"));
-	idx = digit_count(n);
-	rest = (char *)malloc((sizeof(char)) * (idx + 1));
-	count = n;
-	if (!rest)
-		return (0);
-	rest[idx--] = 0;
-	if (count < 0)
+	if (argc == 2)
 	{
-		rest[0] = '-';
-		count *= -1;
+		str1 = ft_atoi(argv[1]);
+		str2 = atoi(argv[1]);
+		printf ("str1: %d | str2: %d\n", str1, str2);
 	}
-	while (count > 0)
-	{
-		rest[idx--] = count % 10 + '0';
-		count /= 10;
-	}
-	return (rest);
-}
-
-/*int	main(void)
-{
-	printf("%s\n", ft_itoa(100));
-	printf("%s\n", ft_itoa(-100));
-	printf("%s\n", ft_itoa(0));
 	return (0);
 }*/
